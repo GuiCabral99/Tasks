@@ -16,7 +16,7 @@ export default function TaskId({ params }) {
   };
 
   const handleSubmit = async () => {
-    const res = await fetch(`http://localhost:3000/api/tasks/${params.id}`, {
+    const res = await fetch(`/api/tasks/${params.id}`, {
       method: "PATCH",
       body: JSON.stringify(newTask),
       headers: { "Content-Type": "application/json" },
@@ -26,14 +26,14 @@ export default function TaskId({ params }) {
   };
 
   const deleteTask = async () => {
-    const res = await fetch(`http://localhost:3000/api/tasks/${params.id}`, {
+    const res = await fetch(`/api/tasks/${params.id}`, {
       method: "DELETE",
     });
     router.push("/");
   };
 
   const getTask = async () => {
-    const res = await fetch(`http://localhost:3000/api/tasks/${params.id}`);
+    const res = await fetch(`/api/tasks/${params.id}`);
     const data = await res.json();
     setNewTask({ title: data.title, description: data.description });
   };

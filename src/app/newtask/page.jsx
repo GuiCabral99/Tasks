@@ -17,7 +17,7 @@ export default function Task() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await fetch("http://localhost:3000/api/tasks", {
+    await fetch("/api/tasks", {
       method: "POST",
       body: JSON.stringify(newTask),
       headers: { "Content-Type": "application/json" },

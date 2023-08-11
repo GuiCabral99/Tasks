@@ -7,7 +7,7 @@ export default function Tasklist() {
   const [tasks, setTasks] = useState([]);
 
   const getTasks = async () => {
-    const res = await fetch("http://localhost:3000/api/tasks", {
+    const res = await fetch("/api/tasks", {
       cache: "no-store",
     });
     const data = await res.json();
