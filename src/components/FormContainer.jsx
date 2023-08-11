@@ -25,7 +25,7 @@ export default function FormContainer(props) {
         type="submit"
         className="w-full p-2.5 rounded-md bg-emerald-600 hover:bg-emerald-500"
       >
-        Criar
+        {props.btn}
       </button>
     </form>
   );

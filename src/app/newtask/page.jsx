@@ -32,7 +32,11 @@ export default function Task() {
           <h1 className="text-4xl font-medium text-zinc-50">
             Nova <span className="underline decoration-emerald-400">Task</span>
           </h1>
-          <FormContainer submit={handleSubmit} change={handleChange} />
+          <FormContainer
+            submit={handleSubmit}
+            change={handleChange}
+            btn="Salvar"
+          />
         </div>
       </div>
     </main>

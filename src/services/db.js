@@ -6,12 +6,9 @@ async function connect() {
   if (connection.isConnected) {
     return;
   }
-  const db = await mongoose.connect(
-    "mongodb+srv://guicabral7641:k1NCyMKKXqVDbJL5@cluster0.uzw8jz8.mongodb.net/?retryWrites=true&w=majority",
-    {
-      useNewUrlParser: true,
-    }
-  );
+  const db = await mongoose.connect(process.env.MONGODB_URI, {
+    useNewUrlParser: true,
+  });
   connection.isConnected = db.connections[0].readyState;
 }
 

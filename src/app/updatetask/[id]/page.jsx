@@ -64,6 +64,7 @@ export default function TaskId({ params }) {
             change={handleChange}
             inputValue={newTask.title}
             textareaValue={newTask.description}
+            btn="Atualizar"
           />
         </div>
       </div>
