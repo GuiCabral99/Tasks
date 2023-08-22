@@ -26,9 +26,9 @@ export default function Task() {
   };
   return (
     <main>
-      <Header link="#" />
-      <div className="h-[calc(100vh-8rem)] flex items-center">
-        <div className=" flex flex-col justify-center items-center space-y-8 border-2 w-2/5 m-auto p-12 rounded-md">
+      <Header link="#" hidden="hidden" />
+      <div className="px-4 h-[calc(100vh-8rem)] flex items-center">
+        <div className="flex flex-col justify-center items-center space-y-8 border-2 md:w-96 m-auto p-8 md:p-12 rounded-md">
           <h1 className="text-4xl font-medium text-zinc-50">
             Nova <span className="underline decoration-emerald-400">Task</span>
           </h1>
