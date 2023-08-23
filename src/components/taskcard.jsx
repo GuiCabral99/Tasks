@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Modal from "./Modal";
 
 export default function TaskCard({ task }) {

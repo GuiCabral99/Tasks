@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import FormContainer from "./FormContainer";
 import Input from "./Input";
 import Textarea from "./Textarea";
 
@@ -24,17 +23,17 @@ export default function Modal(props) {
       setNewTask({ ...newTask, [e.target.name]: e.target.value });
     };
 
-    const handleSubmit = async () => {
-      const res = await fetch(`/api/tasks/${props.taskId}`, {
+    const handleSubmit = async (e) => {
+      e.preventDefault();
+      await fetch(`/api/tasks/${props.taskId}`, {
         method: "PATCH",
         body: JSON.stringify(newTask),
         headers: { "Content-Type": "application/json" },
       });
-      const data = await res.json();
     };
 
     const deleteTask = async () => {
-      const res = await fetch(`/api/tasks/${props.taskId}`, {
+      await fetch(`/api/tasks/${props.taskId}`, {
         method: "DELETE",
       });
     };
@@ -75,6 +74,7 @@ export default function Modal(props) {
               <div className="flex justify-between w-full">
                 <button
                   type="submit"
+                  // onClick={props.closeModal}
                   className="bg-emerald-600 w-20 h-12 rounded-md"
                 >
                   Salvar

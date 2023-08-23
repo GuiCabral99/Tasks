@@ -21,8 +21,8 @@ export default function Tasklist() {
       <Header link="/newtask" text="+ Nova task" />
       <main className="p-8 flex justify-center m-auto">
         <div className="flex gap-4 flex-wrap mx-auto">
-          {tasks.map((task) => (
-            <TaskCard task={task} key={task._id} />
+          {tasks.map((task, index) => (
+            <TaskCard task={task} key={index} />
           ))}
         </div>
       </main>
